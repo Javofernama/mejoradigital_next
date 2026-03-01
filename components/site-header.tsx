@@ -31,10 +31,10 @@ export function SiteHeader() {
       href: "/proyectos",
       label: "Nuestros Proyectos",
     },
-    {
+    /* {
       href: "/alivia",
       label: "AlivIA",
-    },
+    }, */
     {
       href: "/contacto",
       label: "Contacto",
