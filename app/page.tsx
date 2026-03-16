@@ -212,6 +212,135 @@ export default function Home() {
           </div>
         </section>
 
+        {/* AI & Automation Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+          <div className="container relative px-4 md:px-6">
+            {/* Header */}
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-primary font-medium">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+                </span>
+                Automatización Inteligente
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Tu negocio, trabajando solo
+                </h2>
+                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                  Implementamos agentes de IA y flujos automatizados que ejecutan tareas,
+                  toman decisiones y conectan tus sistemas — sin intervención humana.
+                </p>
+              </div>
+            </div>
+
+            {/* Main grid */}
+            <div className="mx-auto max-w-5xl grid gap-6 md:grid-cols-3">
+              {/* Card 1 - Agentes IA */}
+              <Card className="group relative overflow-hidden border-primary/10 hover:border-primary/30 transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <CardContent className="relative p-6 space-y-4">
+                  <div className="rounded-xl bg-primary/10 p-3 w-fit">
+                    {/* Bot icon inline */}
+                    <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.713-1.115 2.461l-1.084-.242m0 0l1.084.242M5 14.5l-1.402 1.902c-1 1-.03 2.713 1.115 2.461l1.571-.35" />
+                    </svg>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="font-bold text-lg">Agentes Virtuales con IA</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Agentes conversacionales y autónomos que atienden clientes, procesan
+                      solicitudes y ejecutan acciones en tiempo real, integrados a tus canales.
+                    </p>
+                  </div>
+                  <ul className="space-y-1.5 text-xs text-muted-foreground">
+                    {["Atención al cliente 24/7", "Procesamiento de documentos", "Toma de decisiones autónoma"].map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <CheckCircle className="h-3.5 w-3.5 text-success shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Card 2 - n8n / Automatización */}
+              <Card className="group relative overflow-hidden border-accent/10 hover:border-accent/30 transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <CardContent className="relative p-6 space-y-4">
+                  <div className="rounded-xl bg-accent/10 p-3 w-fit">
+                    <Cog className="h-6 w-6 text-accent" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="font-bold text-lg">Flujos con n8n & Make</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Automatizamos tus operaciones conectando apps, APIs y bases de datos
+                      con flujos visuales que corren solos, sin código complejo.
+                    </p>
+                  </div>
+                  <ul className="space-y-1.5 text-xs text-muted-foreground">
+                    {["Integración entre sistemas", "Notificaciones automáticas", "Reportes y sincronización"].map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <CheckCircle className="h-3.5 w-3.5 text-success shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Card 3 - Procesos con IA */}
+              <Card className="group relative overflow-hidden border-success/10 hover:border-success/30 transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-br from-success/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <CardContent className="relative p-6 space-y-4">
+                  <div className="rounded-xl bg-success/10 p-3 w-fit">
+                    <BarChart className="h-6 w-6 text-success" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="font-bold text-lg">Procesos Potenciados con IA</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Incorporamos modelos de lenguaje y visión artificial en tus flujos
+                      de trabajo para clasificar, resumir, predecir y generar contenido.
+                    </p>
+                  </div>
+                  <ul className="space-y-1.5 text-xs text-muted-foreground">
+                    {["LLMs integrados a tu stack", "Clasificación y extracción", "Generación de contenido"].map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <CheckCircle className="h-3.5 w-3.5 text-success shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Bottom banner */}
+            <div className="mx-auto max-w-5xl mt-8 rounded-2xl border border-primary/10 bg-primary/5 p-6 md:p-8">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="text-center md:text-left space-y-1">
+                  <p className="font-semibold text-lg">¿Tienes un proceso repetitivo que quieres automatizar?</p>
+                  <p className="text-sm text-muted-foreground">
+                    Cuéntanos cómo trabaja tu equipo hoy y diseñamos una solución a medida.
+                  </p>
+                </div>
+                <Button size="lg" className="shrink-0 group" asChild>
+                  <Link href="/contacto">
+                    Agenda una llamada
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Solutions Section - Replaces Video Showcase */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
           <div className="container px-4 md:px-6">
