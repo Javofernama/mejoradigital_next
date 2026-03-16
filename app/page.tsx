@@ -16,6 +16,7 @@ import {
   Github,
   Linkedin,
   Twitter,
+  Brain,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -83,6 +84,13 @@ export default function Home() {
       title: "Plataformas para Empresas",
       description:
         "Diseñamos software especializado para optimizar la gestión de tu negocio.",
+      color: "from-accent/20 to-success/20",
+    },
+    {
+      icon: Brain,
+      title: "Agentes Virtuales y Automatización con IA",
+      description:
+        "Implementamos agentes de IA y flujos automatizados que ejecutan tareas, toman decisiones y conectan tus sistemas — sin intervención humana.",
       color: "from-accent/20 to-success/20",
     },
   ];
